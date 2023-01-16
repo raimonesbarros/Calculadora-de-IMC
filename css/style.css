@@ -1,0 +1,133 @@
+@keyframes pop-up {
+  from { top: 0; } to { top: 1.4em; }
+}
+
+*{
+  margin          : 0;
+  padding         : 0;
+  text-decoration : none;
+  border          : none;
+  box-sizing      : border-box;
+  font-size       : 16px;
+}
+
+:root{
+  --azul          : #0000c7;
+  --amarelo       : #cfcc00;
+  --verde         : #017501;
+  --vermelho      : #c00000;
+  --sombra        : #00000083;
+}
+
+html, body{
+  background-color: var(--azul);
+  font-family     : 'Gill Sans', 'Gill Sans MT', sans-serif;
+  height          : 100vh;
+}
+
+body, main, form{
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+body{
+  align-items     : center;
+}
+
+main{
+  background-color: #fff;
+  align-items     : center;
+  width           : 100%;
+  max-width       : 500px;
+  min-width       : 320px;
+  height          : 100vh;
+  position        : relative;
+  justify-content : flex-start;
+  padding-top     : 1em;
+  box-shadow      : 0 0 5px var(--sombra);
+}
+
+.msg{
+  background-color: var(--verde);
+  color           : #fff;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  position        : absolute;
+  top             : 1.4em;
+  width           : 90%;
+  height          : 3em;
+  border-radius   : .3em;
+  animation       : pop-up .3s ease-out;
+}
+
+.disable{
+  display: none;
+}
+
+h1{
+  font-size       : 2em;
+  color           : var(--azul);
+}
+
+span{
+  font-size       : 1em;
+  color           : var(--vermelho);
+  border-bottom   : var(--verde) solid 5px;
+}
+
+form{
+  width           : 90%;
+  padding-top         : 1em;
+}
+
+label{
+  margin-top      : 1em; 
+}
+
+label > span{
+  border          : none;
+}
+
+input{
+  border-bottom   : var(--azul) solid 2px;
+  padding         : .4em 0;
+  outline         : none;
+}
+
+input:focus{
+  border-bottom   : var(--verde) solid 2px;
+}
+
+button{
+  background-color: var(--azul);
+  color           : #fff;
+  margin          : 1em auto;
+  padding         : .5em;
+  width           : 50%;
+  border-radius   : .5em;
+  outline-color   : var(--azul);
+}
+
+#table, table{
+  background-color: #fff;
+  font-family     : Arial, Helvetica, sans-serif;
+  width           : 100%;
+  text-align      : center;
+}
+
+th{
+  background-color: var(--azul);
+  color           : #fff;
+  padding         : .3em;
+}
+
+#thName, #c{
+  width           : 40%;
+}
+
+td{
+  padding         : .3em;
+  background-color: #888;
+}
