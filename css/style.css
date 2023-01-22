@@ -63,7 +63,7 @@ main{
 }
 
 .disable{
-  display: none;
+  display         : none;
 }
 
 h1{
@@ -79,7 +79,7 @@ span{
 
 form{
   width           : 90%;
-  padding-top         : 1em;
+  padding-top     : 1em;
 }
 
 label{
@@ -130,15 +130,4 @@ th{
 td{
   padding         : .3em;
   background-color: #00aeff;
-}
-
-#xall{
-  background-color: var(--vermelho) !important;
-}
-
-.x{
-  background-color: #fff !important;
-  color           : #c00000 !important;
-  border          : #c00000 solid 1px !important;
-  font-weight     : bold;
 }
