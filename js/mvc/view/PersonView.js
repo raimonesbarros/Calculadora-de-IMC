@@ -11,7 +11,6 @@ export class PersonView{
         <th id="thName"> Nome </th>
         <th id="imc"> IMC </th>
         <th id="c"> Situação </th>
-        <th id="xall"> x </td>
       </tr>
       ${model.list.map(el=>{
         return `
@@ -19,7 +18,6 @@ export class PersonView{
             <td> ${el.name} </td>
             <td> ${el.imc} </td>
             <td> ${el.classIMC()} </td>
-            <td class="x"> x </td>
           </tr>
         `
         }).join('')
