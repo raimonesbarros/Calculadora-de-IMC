@@ -8,11 +8,12 @@ export class PersonList{
     this._personList.push(person)
   }
 
-  clearList(){
-    this._personList.shift()
+  setlist(list){
+    this._personList = list
   }
 
   get list(){
     return [].concat(this._personList)
   }
+
 }
