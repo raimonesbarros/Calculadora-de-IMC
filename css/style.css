@@ -131,3 +131,18 @@ td{
   padding         : .3em;
   background-color: #00aeff;
 }
+
+.clearAll, .clear{
+  cursor          : pointer;
+}
+
+.clearAll{
+  background-color: #ff0000;
+}
+
+.clear{
+  font-weight     : bold;
+  background-color: #eee;
+  border          : #ff0000 solid 1px;
+  color           : #ff0000;
+}
