@@ -1,5 +1,5 @@
 @keyframes pop-up {
-  from { top: 0; } to { top: 1.4em; }
+  from { top: -1em; } to { top: 1.4em; }
 }
 
 *{
@@ -49,8 +49,6 @@ main{
 }
 
 .msg{
-  background-color: var(--verde);
-  color           : #fff;
   display         : flex;
   justify-content : center;
   align-items     : center;
@@ -58,8 +56,13 @@ main{
   top             : 1.4em;
   width           : 90%;
   height          : 3em;
-  border-radius   : .3em;
-  animation       : pop-up .3s ease-out;
+  border-radius   : .4em;
+  animation       : pop-up .2s ease-out;
+}
+
+.success{
+  background-color: var(--verde);
+  color           : #fff;
 }
 
 .disable{
@@ -145,4 +148,56 @@ td{
   background-color: #eee;
   border          : #ff0000 solid 1px;
   color           : #ff0000;
+}
+
+.full-modal{
+  position        : absolute;
+  background-color: #000000;
+  opacity         : .75;
+  height          : 100vh;
+  width           : 100%;
+}
+
+.modal{
+  background-color: #00aeff;
+  position        : absolute;
+  width           : 80%;
+  border-radius   : .5em;
+  padding         : .5em;
+  box-shadow      : 0 0 3px #0000007c;
+}
+
+.ask{
+  background-color: #0000c7;
+  font-size       : 1.2em;
+  padding         : .5em;
+  border-radius   : .25em;
+  color           : #fff;
+  box-shadow      : 0 0 3px #000000fb;
+}
+
+.text{
+  font-size       : 1.1em;
+  padding         : 1em .25em;
+  text-align      : center;
+}
+
+.buttons{
+  display         : flex;
+  justify-content : space-between;
+}
+
+.buttons button{
+  width           : 49%;
+  margin          : 0.2em 0;
+}
+
+.y{
+  background-color: #017501;
+  color           : #eee;
+}
+
+.n{
+  background-color: #c00000;
+  color           : #eee;
 }
