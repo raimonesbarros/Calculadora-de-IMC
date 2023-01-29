@@ -16,24 +16,25 @@ export class PersonController{
     this.message      = new Message()
     this._personList  = new PersonList()
     this._personView  = new PersonView()
-    this._repository  = new Repository()
-    
+    this._repository  = new Repository()  
   }
+
   // Pede para personView gerar visualição inicial da tabela
   initView(){
     this._personView.initTable()
   }
+
   // informa o main se há dados no repositório
   get repository(){
     return localStorage.getItem('_repository') ? true : false
   }
+
   // Cria um repositório
   setRepository(){
     localStorage.setItem('_repository', [])
   }
 
   _add(evt){
-
     evt.preventDefault()
     // Envia nova pessoa criada para adicionar a lista de pessoas
     this._personList.addPerson(this._createPerson())
@@ -57,15 +58,20 @@ export class PersonController{
     localStorage.removeItem('_repository')
     // Cria um novo repositório  vazio
     localStorage.setItem('_repository', [])
-
+    // Zera o id, quantidade de instâncias de Person
+    Person.id = 0
     // Envia o repositório vazio para limpar a lista de pessoas
     this._personList.setRepo([])
+    // Limpa o local da tabela no documento
+    this._personView._table.innerHTML = ''
+    // Inicia uma nova tabela
+    this._personView.initTable()
   }
 
   // Apaga linha da tabela
-  clearElement(element){
+  clearElement(id){
     // Pede para remover a pessoa da lista de pessoas
-    this._personList.removePerson(element)
+    this._personList.removePerson(id)
     // Envia a lista SEM A PESSOA para o repositório
     this._repository.upObj(this._personList.list)
     // Se tiver pessoas na lista mostra,
@@ -73,10 +79,7 @@ export class PersonController{
     if(this._personList.list[0]){
       this.show()
     } else{
-      localStorage.removeItem('_repository')
-      localStorage.setItem('_repository', [])
-      this._personView._table.innerHTML = ''
-      this._personView.initTable()
+      this.clearTable()
     }
   }
 

@@ -10,9 +10,9 @@ export class PersonList{
   }
 
   // Remove a pessoa da lista
-  removePerson(person){
+  removePerson(id){
     this._personList = this._personList.filter(el=>{
-      return el._name!=person
+      return el.id!=id
     })
   }
 

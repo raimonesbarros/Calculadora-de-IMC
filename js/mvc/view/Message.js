@@ -26,7 +26,7 @@ export class Message{
   }
 
   // Cria e mostra a janela modal de acordo com o pedido de PersonView
-  modal(element){
+  modal(nome, id){
     // Cria os elementos da janela modal
     let section1  = document.createElement('section')
     let section2  = document.createElement('section')
@@ -36,16 +36,16 @@ export class Message{
     let yes       = document.createElement('button')
     let no        = document.createElement('button')
     // Atribui textos com informações passadas pela PersonView
-    ask.innerHTML = `Remover ${element}?`
-    text.innerHTML= `Remover irá excluir os dados de ${element} permanentemente da lista.`
+    ask.innerHTML = `Remover ${nome}?`
+    text.innerHTML= `Remover irá excluir os dados de ${nome} permanentemente.`
     yes.innerHTML = 'Sim'
     no .innerHTML = 'Não'
     // Adiciona evento de escuta nos botões
     yes.addEventListener('click', ()=>{
-      if(element == 'TODA tabela'){
+      if(nome == 'TODA tabela'){
         toClearTable()
       } else {
-        toClearElement(element)
+        toClearElement(id)
       }
       this.removeModal(section1, section2)
     })
@@ -70,7 +70,7 @@ export class Message{
     buttons  .appendChild(no)
   }
 
-  // Nome bem sugestivo, remove o modal crido
+  // Nome bem sugestivo, remove o modal criado
   removeModal(iten1, iten2){
     iten1.remove()
     iten2.remove()

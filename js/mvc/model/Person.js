@@ -1,12 +1,16 @@
 export class Person{
 
+  static id = 0
   constructor(name, age, weight, height){
+    this.id      = Person.id + 1
     this._name   = name
     this._age    = age
     this._weight = weight
     this._height = height
     this._imc    = (this._weight / (this._height * this._height)).toFixed(2)
     this._Class  = this.classIMC()
+    Person.id   += 1
+    
   }
 
   get name(){
@@ -37,5 +41,9 @@ export class Person{
     }
 
     return Class
+  }
+
+  setId(){
+    Person.id = 0
   }
 }

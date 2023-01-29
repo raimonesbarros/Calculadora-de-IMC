@@ -79,13 +79,13 @@ export class PersonView{
       btn.addEventListener('click', evt=>{
         let name = evt.target.parentNode.dataset.name
         let id = evt.target.parentNode.id
-        // Chama caixa de dialogo
-        this.message.modal(name)
+        // Chama caixa de dialogo passando o nome e o id de quem deve remover
+        this.message.modal(name, id)
       })
       // Cria os atributos
       btn.setAttribute('class', 'btn clear')
       tr.setAttribute('data-name', el._name)
-      tr.setAttribute('id', 'L'+(1+i))
+      tr.setAttribute('id', el.id )
       // Gera a visualização de cada linha criada
       tr.appendChild(id)
       tr.appendChild(nome)

@@ -26,8 +26,8 @@ form.addEventListener('submit', evt=>{
 })
 
 // Pede para o controlador apagar linha da tabela
-export function toClearElement(element){
-  personController.clearElement(element)
+export function toClearElement(id){
+  personController.clearElement(id)
 }
 // Pede para o controlador apagar toda tabela
 export function toClearTable(){
