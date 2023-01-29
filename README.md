@@ -1,6 +1,6 @@
 <h1><span><img src="img/favicon.ico" width="20em"></span> Calculadora de IMC</h1> 
 
-## 🔢 Calculadora de Índice de Massa Corporal
+## Calculadora de Índice de Massa Corporal
 
 ### Aplicação dinâmica, para fins de prática de conhecimentos e aperfeiçoamento de técnicas.
 
@@ -20,7 +20,7 @@ Cabeçalho de tabela de resultados.
 
 - ### Página final
 
-![](img/show/results.jpg)
+![](img/show/final.jpg)
 
 Tabela de resultados;
 
@@ -30,18 +30,31 @@ Identificação por nome de entrada;
 
 Resultado do cálculo de IMC;
 
-Informativo de situção considerando a classificação de IMC.
+Informativo de situção considerando a classificação de IMC;
 
+Botão para excluir dados de linha;
+
+Botão limpar tabela
 ----
 
 ## 📲 Responsividade
+<div align="center">
 
-![](img/show/mobile.jpg)
+![](img/show/mob1.jpg)
+![](img/show/mob2.jpg)
+![](img/show/mob3.jpg)
+
+</div>
+
+----
+
+## ✒️ Design
+- ### Simples, minimalista, bordas retas e tema light.
 
 ----
 
 ## 💻 Tecnologias utilizadas
-
+<br>
 <div align="center">
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
@@ -51,24 +64,11 @@ Informativo de situção considerando a classificação de IMC.
 
 ----
 
-
-## ✒️ Design
-- ### Simples, minimalista, monocromático, bordas retas e tema light.
-
-----
-
-
-## ⬆️ Atualizar
-
-- Incluir persistência de dados;
-- Permitir exclusão de linhas da tabela;
-- Permitir limpesa da tabela;
-
-----
-
 ## 📖 Abordagens
 
 - POO, MVC, convenções, e abordagens de segurança;
+- Persistência de dados localStorage;
+- JSON Envio, Requisição e Manipulação.
 
 ----
 
