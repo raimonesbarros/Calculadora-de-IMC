@@ -137,6 +137,7 @@ td{
 
 .clearAll, .clear{
   cursor          : pointer;
+  padding         : 0 .6em;
 }
 
 .clearAll{
@@ -180,6 +181,8 @@ td{
   font-size       : 1.1em;
   padding         : 1em .25em;
   text-align      : center;
+  font-weight     : 600;
+  color           : #1b1b55;
 }
 
 .buttons{
@@ -188,16 +191,27 @@ td{
 }
 
 .buttons button{
-  width           : 49%;
+  width           : 40%;
   margin          : 0.2em 0;
 }
 
-.y{
+.yes{
   background-color: #017501;
   color           : #eee;
 }
 
-.n{
+.no{
   background-color: #c00000;
   color           : #eee;
+}
+
+@media screen and (width > 568px) {
+  .modal{
+    width         : 400px;
+  }
+}
+@media screen and (width < 400px) {
+  .modal{
+    width         : 95%;
+  }
 }
