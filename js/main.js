@@ -1,39 +1,37 @@
-import { PersonView } from "./mvc/view/PersonView.js"
 import { PersonController } from "./mvc/controller/PersonController.js"
 
-// Instanciar modelo de visualização
-let personView       = new PersonView()
 // Instanciar modelo de controlador
 let personController = new PersonController()
 
 // Iniciar visualização da tabela
-personView.initTable()
+personController.initView()
 
 // Mostrar dados guardados
-if(localStorage.getItem('_repository')){
+if(personController.repository == true){
   personController.show()
 } else {
 // Criar repositório para guardar dados
-  localStorage.setItem('_repository', [])
+  personController.setRepository()
 }
 
-// Informações de formulário
+// Informações do DOM
 const form = document.querySelector('form')
+const table= document.querySelector('table')
 
 form.addEventListener('submit', evt=>{
   // Enviar o evento ao controlador
   personController._add(evt)
   // Pedir para o controlador limpar o formulário
   personController._formClean()
-  
 })
 
-// Apaga linha da tabela parte 2/3
+// Pede para o controlador apagar linha da tabela
 export function toClearElement(element){
   personController.clearElement(element)
 }
-
-// Apaga toda tabela parte 2/3
+// Pede para o controlador apagar toda tabela
 export function toClearTable(){
   personController.clearTable()
+  table.innerHTML = ''
+  personController.initView()
 }

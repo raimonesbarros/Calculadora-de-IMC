@@ -1,18 +1,19 @@
-// Importa as funções de limpar tabela para ser usada aqui...
-import { toClearTable, toClearElement} from "../../main.js"
+// Importa modelo de mensagens para trocar informações
+import { Message }  from "./Message.js"
 
 export class PersonView{
   
   constructor(){
+    this.message= new Message()
     this._table = document.querySelector('table')
   }
 
   // Gera a visualização inicial da tabela (cabeçalho)
   initTable(){
-    let         tr = document.createElement('tr')
-    let       nome = document.createElement('th')
-    let        imc = document.createElement('th')
-    let       clas = document.createElement('th')
+    let tr         = document.createElement('tr')
+    let nome       = document.createElement('th')
+    let imc        = document.createElement('th')
+    let clas       = document.createElement('th')
     nome.innerHTML = 'Nome'
     imc.innerHTML  = 'IMC'
     clas.innerHTML = 'Situação'
@@ -27,7 +28,7 @@ export class PersonView{
 
   // Gera a visualização da tabela
   view(list){
-    // Limpa a tabela
+    // Limpa o local no documento
     this._table.innerHTML = ''
     // Cria os elementos do novo cabeçalho
     let         tr = document.createElement('tr')
@@ -43,18 +44,14 @@ export class PersonView{
     btn.innerHTML  = 'x'
     // Adiciona escuta de evento para limpar tabela
     btn.addEventListener('click', evt=>{
-      // Limpa a tabela
-      this._table.innerHTML = ''
-      // Pede para gerar um novo cabeçalho inicial
-      this.initTable()
-      // Apaga toda tabela parte 1/3
-      toClearTable()
+      // Chama a caixa de dialogo de Message
+      this.message.modal('TODA tabela')
     })
     // Cria os atributos
     nome.setAttribute('id', 'thName')
-    imc.setAttribute('id', 'imc')
+    imc .setAttribute('id', 'imc')
     clas.setAttribute('id', 'c')
-    btn.setAttribute('class', 'btn clearAll')
+    btn .setAttribute('class', 'btn clearAll')
     // Gera a visualização dos elementos criados
     tr.appendChild(id)
     tr.appendChild(nome)
@@ -82,8 +79,8 @@ export class PersonView{
       btn.addEventListener('click', evt=>{
         let name = evt.target.parentNode.dataset.name
         let id = evt.target.parentNode.id
-        // Apaga linha da tabela parte 1/3
-        toClearElement(name)
+        // Chama caixa de dialogo
+        this.message.modal(name)
       })
       // Cria os atributos
       btn.setAttribute('class', 'btn clear')
