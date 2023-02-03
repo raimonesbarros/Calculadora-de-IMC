@@ -12,11 +12,12 @@
 }
 
 :root{
-  --azul          : #0000c7;
-  --amarelo       : #cfcc00;
-  --verde         : #017501;
-  --vermelho      : #c00000;
+  --azul          : #3385ff;
+  --azulclaro     : #00b0cf;
+  --verde         : #5ca85c;
+  --vermelho      : #ff7373;
   --sombra        : #00000083;
+  --branco        : #eee;
 }
 
 html, body{
@@ -36,7 +37,7 @@ body{
 }
 
 main{
-  background-color: #fff;
+  background-color: var(--branco);
   align-items     : center;
   width           : 100%;
   max-width       : 500px;
@@ -62,7 +63,7 @@ main{
 
 .success{
   background-color: var(--verde);
-  color           : #fff;
+  color           : var(--branco);
 }
 
 .disable{
@@ -97,6 +98,7 @@ input{
   border-bottom   : var(--azul) solid 2px;
   padding         : .4em 0;
   outline         : none;
+  background-color: var(--branco);
 }
 
 input:focus{
@@ -105,7 +107,7 @@ input:focus{
 
 button{
   background-color: var(--azul);
-  color           : #fff;
+  color           : var(--branco);
   margin          : 1em auto;
   padding         : .5em;
   width           : 50%;
@@ -114,7 +116,7 @@ button{
 }
 
 #table, table{
-  background-color: #fff;
+  background-color: var(--branco);
   font-family     : Arial, Helvetica, sans-serif;
   width           : 100%;
   text-align      : center;
@@ -122,7 +124,7 @@ button{
 
 th{
   background-color: var(--azul);
-  color           : #dedede;
+  color           : var(--branco);
   padding         : .3em;
 }
 
@@ -132,7 +134,7 @@ th{
 
 td{
   padding         : .3em;
-  background-color: #00aeff;
+  background-color: var(--azulclaro);
 }
 
 .clearAll, .clear{
@@ -141,14 +143,14 @@ td{
 }
 
 .clearAll{
-  background-color: #ff0000;
+  background-color: var(--vermelho);
 }
 
 .clear{
   font-weight     : bold;
-  background-color: #eee;
-  border          : #ff0000 solid 1px;
-  color           : #ff0000;
+  background-color: var(--branco);
+  border          : var(--vermelho) solid 1px;
+  color           : var(--vermelho);
 }
 
 .full-modal{
@@ -160,21 +162,19 @@ td{
 }
 
 .modal{
-  background-color: #00aeff;
+  background-color: #77e4ff;
   position        : absolute;
   width           : 80%;
-  border-radius   : .5em;
-  padding         : .5em;
-  box-shadow      : 0 0 3px #0000007c;
+  padding         : .3em;
+  box-shadow      : 0 0 3px var(--sombra);
 }
 
 .ask{
-  background-color: #0000c7;
+  background-color: rgba(0, 78, 194, 0.952);
   font-size       : 1.2em;
   padding         : .5em;
-  border-radius   : .25em;
-  color           : #fff;
-  box-shadow      : 0 0 3px #000000fb;
+  color           : var(--branco);
+  box-shadow      : 0 0 3px var(--sombra);
 }
 
 .text{
@@ -182,7 +182,7 @@ td{
   padding         : 1em .25em;
   text-align      : center;
   font-weight     : 600;
-  color           : #1b1b55;
+  color           : #00245a;
 }
 
 .buttons{
@@ -193,16 +193,17 @@ td{
 .buttons button{
   width           : 40%;
   margin          : 0.2em 0;
+  border-radius   : 0;
 }
 
 .yes{
-  background-color: #017501;
-  color           : #eee;
+  background-color: var(--verde);
+  color           : var(--branco);
 }
 
 .no{
-  background-color: #c00000;
-  color           : #eee;
+  background-color: var(--vermelho);
+  color           : var(--branco);
 }
 
 @media screen and (width > 568px) {
