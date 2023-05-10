@@ -1,4 +1,4 @@
-<h1><span><img src="img/favicon.ico" width="20em"></span> Calculadora de IMC</h1> 
+<h1><span><img src="img/favicon1.ico" width="20em"></span> Calculadora de IMC</h1> 
 
 ## Calculadora de Índice de Massa Corporal
 
