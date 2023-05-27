@@ -1,4 +1,4 @@
-<h1><span><img src="img/favicon1.ico" width="20em"></span> Calculadora de IMC</h1> 
+<h1><span><img src="img/favicon1.ico" width="20em"></span> Calculadora de IMC :guided</h1>
 
 ## Calculadora de Índice de Massa Corporal
 
@@ -57,10 +57,10 @@ Botão limpar tabela
 <br>
 <div align="center">
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
   com foco em:
-  
+
   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 </div>
@@ -72,6 +72,11 @@ Botão limpar tabela
 - POO, MVC, convenções, e abordagens de segurança;
 - Persistência de dados localStorage;
 - JSON Envio, Requisição e Manipulação.
+
+----
+
+## Legenda
+:guided - Projeto guiado por curso
 
 ----
 
